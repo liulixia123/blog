@@ -7,6 +7,7 @@ use DB;
 use App\Model\Test;
 use App\Model\User;
 use App\Model\UserRole;
+use App\Facades\Char;
 
 class IndexController extends Controller
 {
@@ -50,9 +51,11 @@ class IndexController extends Controller
                 $query->with('userGroup');
             }
         ])->first()->toArray());*/
-
-          echo "11";
-
+        //查看服务注册者有哪些
+        //dd(app()->getBindings());
+        //两种方法去调用工具类，门面和容器
+        //return Char::char();
+        return app('char')->char();
 
     }
 }

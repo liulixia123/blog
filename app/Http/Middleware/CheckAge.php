@@ -16,8 +16,8 @@ class CheckAge
     public function handle($request, Closure $next)
     {
         
-        if($request['age']<200){
-            echo  "不通过";
+        if($request->age<200){
+            return response('不通过');
         }
         // 在 $next($request)前执行的就是前置
         $response = $next($request); // 闭包,controller
