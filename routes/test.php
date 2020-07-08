@@ -13,3 +13,7 @@ Route::get('test', function () {
 });
 
 //Route::get('index/age/','IndexController@index')->middleware('CheckAge');
+
+
+Route::get('test/test', "TestController@test");
+Route::get('test/test1', "TestController@test1");
