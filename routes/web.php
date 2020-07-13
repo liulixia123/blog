@@ -63,3 +63,4 @@ Route::any('foo', function () {
 // Route::get($uri, $callback);
 // Route::post($uri, $callback);
 // Route::put($uri, $callback);
+Route::any('/wechat','WeChatController@serve');
